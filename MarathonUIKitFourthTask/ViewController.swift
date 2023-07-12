@@ -11,7 +11,7 @@ class ViewController: UIViewController {
 
     let tableView = UITableView()
 
-    private lazy var data = Array(0...10).map{Item(isChecked: false, number: $0)}
+    private lazy var data = Array(0...50).map{Item(isChecked: false, number: $0)}
 
     private lazy var dataSource = UITableViewDiffableDataSource<Section, Int>(tableView: tableView) { tableView, indexPath, itemIdentifier in
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(UITableViewCell.self)", for: indexPath)
